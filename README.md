@@ -28,7 +28,7 @@
 
 ```bash
     composer install
-    npm install && npm run build
+    npm install 
 ```
 
 3. Configurar el archivo `.env`:
@@ -47,12 +47,23 @@ DB_DATABASE=nombre_de_tu_base_de_datos
 DB_USERNAME=tu_usuario
 DB_PASSWORD=tu_contraseña
 ```
+Configurar las credenciales del sistema de correos en el archivo `.env`:
 
+```
+MAIL_MAILER=log
+MAIL_SCHEME=null
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=correo@example.com
+MAIL_PASSWORD=
+MAIL_FROM_ADDRESS="correo@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
 4. Generar la clave de la aplicación y migrar la base de datos:
 
 ```bash
     php artisan key:generate
-    `php artisan migrate:fresh --seed
+    php artisan migrate:fresh --seed
 ```
 
 5. **Configurar Laravel Sanctum:**
