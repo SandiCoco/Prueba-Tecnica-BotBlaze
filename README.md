@@ -82,7 +82,7 @@ MAIL_FROM_NAME="${APP_NAME}"
     php artisan serve
 ```
 
-La aplicación estará disponible en: [http://localhost:8000](http://localhost:8000)
+La aplicación estará disponible en: [http://localhost:8000](http://localhost:8000) con credenciales user@example.com y password123.
 
 
 
